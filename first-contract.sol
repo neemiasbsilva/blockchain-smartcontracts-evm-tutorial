@@ -4,7 +4,6 @@ contract MyContract {
     string public value = "myValue";
     
     
-    
     function set(string memory _value) public{
         value = _value;
     }
