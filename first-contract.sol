@@ -1,9 +1,20 @@
 pragma solidity 0.5.1;
     
 contract MyContract {
-    string public string_value = "My string";
-    bool public bool_value = true;
-    int public int_value = 200;
-    uint public uint_value = 200;
-    uint8 public uint8_value = 8;
+    
+    enum State{ Waiting, Ready, Active}
+    
+    State public state;
+    
+    constructor() public {
+        state = State.Waiting;
+    }
+    
+    function activate() public {
+        state = State.Active;
+    }
+    
+    function is_active() public view returns(bool){
+        return state == State.Active;
+    }
 }
