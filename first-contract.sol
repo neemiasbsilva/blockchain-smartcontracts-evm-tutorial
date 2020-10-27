@@ -1,10 +1,5 @@
 pragma solidity 0.5.1;
 
 contract MyContract {
-    string public value = "myValue";
-    
-    
-    function set(string memory _value) public{
-        value = _value;
-    }
+    string public constant value = "myValue";
 }
